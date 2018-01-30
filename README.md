@@ -2,28 +2,18 @@
 kotlin 学习笔记
 
 
-import com.sun.corba.se.impl.orbutil.graph.Graph
-import com.sun.xml.internal.fastinfoset.util.StringArray
-import org.omg.CORBA.Context
-
-import javax.swing.text.AbstractDocument
-import javax.swing.text.View
-import kotlin.reflect.KProperty
-
 /**
  * Created by huochai on 2017/5/29.
  */
 
 
-//数据类型
-/**
+####数据类型
  * 浮点型 Double 64位
  * 浮点型 Float  32位
  * 整型   Long 64位
  * 整型   Int  32位
  * 整型   Short 16位
  * 字节   Byte   8位
- */
 
 
 
@@ -69,8 +59,8 @@ import kotlin.reflect.KProperty
 5. import不仅可以导入类  1) 还可以导入顶层函数和属性  2) 枚举常量 3)在对像声明中的声明的函数和属性
  */
 
-//基本类型
-/** Kotlin中 字符不是数字
+####基本类型
+    Kotlin中 字符不是数字
  *  kotlin里面的所有东西都是对像  我们可以在任何变量上调用其成员函数和属性
  *  1. 数字有以下数字类型  (数字没有隐式转换)
  *      Double 64
@@ -79,14 +69,15 @@ import kotlin.reflect.KProperty
  *      Int    32
  *      Short  16
  *      Byte    8
- *
+ 
  *  2.字面常量 数值常量字面值有以下几种(暂不支持八进制)
- *    十进制(
- *           Long类型用大写的L加在数值后面 123L
- *          123.4 默认为double类型  要在后面加上f/F表示浮点数
- *          )
+ *    十进制( 
+                Long类型用大写的L加在数值后面 123L 
+                123.4 默认为double类型  要在后面加上f/F表示浮点数 )
  *    十六进制
  *    二进制
+ 
+
  *  3.数字字面值中的下划线 可以使用下划线 使得 字面值更易读
  *     val oneMillion = 1_000_00
  *     val oneMillion = 1_000_000
@@ -142,7 +133,7 @@ import kotlin.reflect.KProperty
  *
  */
 
-//控制流
+####控制流
 /**
  * 1.if表达式
  *      kotlin里面  if是一个表达式  即它会有一个返回值，所以三元运算符在kotlin里面就不需要了
@@ -222,8 +213,8 @@ import kotlin.reflect.KProperty
  * 4. while循环  和其它语言的while循环语法一样
  */
 
-//返回和跳转
-/**
+####返回和跳转
+
  * Kotlin 有三种结构化跳转表达式
  *   return。默认从最直接包围它的函数或者匿名函数返回。
  *   break。终止最直接包围它的循环。
@@ -240,10 +231,9 @@ import kotlin.reflect.KProperty
  *      }
  *
  *   这个地方还要再看一下文档，有点看不懂。。。。
- *
- */
 
-//函数
+
+####函数
 /*
 *      1.函数的声明用fun关键字声明  fun Test(x:Int):Int{ return x*3}
 *      2.函数的用法 var test = Test(3)
@@ -295,8 +285,8 @@ import kotlin.reflect.KProperty
 
 */
 
-//类属性和字段
-/**
+####类属性和字段
+
  * 1.属性声明的标准语法是: var/val <propertyName>[: <PropertyType>] [= <property_initializer>]
  *                              [<getter>]
  *                              [<setter>]
@@ -340,10 +330,9 @@ import kotlin.reflect.KProperty
  *          4) 该属性不能是原生类型
  * 10.覆盖属性
  * 11.委托属性
- */
 
-//类
-/**
+####类
+
  * 1.类的声明
  *      class invoice{
  *
@@ -400,8 +389,8 @@ import kotlin.reflect.KProperty
  *
  */
 
-//继承
-/**
+####继承
+
  * 1.在kotlin当中  所有的类都有一个共同的父类:Any 所有的类都默认隐式继承 父类在有些文档当中称为：超类
  * 2. 继承方式是：把父类(超类) 放在类头的冒号后面  注意：如果父类有一个主构造函数的话  子类必须用 子类的主构造函数参数 就地 初始化
  *          class open class Base(p: Int)
